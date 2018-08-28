@@ -1,0 +1,329 @@
+	<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tim and Syl</title>
+
+<style>
+	
+.btn {
+	cursor: pointer;}
+.btn:hover {
+		background-color: aliceblue;
+	display:block;
+	
+	}
+	
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	align-self: baseline;
+	
+}
+
+.dropdown {
+    position:inherit;
+    display:inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+	position: fixed;
+}
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 500px){
+    .modal-content {
+        width: 70%;
+    }
+}
+	
+	
+</style>
+
+<link href="css/simpleGridTemplate.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<header class="header">
+    <h4 class="logo">SONGS THAT YOU LOVE</h4>
+</header>
+
+<br>
+<br>
+
+
+<div>
+<center><h3 class="btn">Somebody's Heartbreak</h3></center>
+<center><h3 class="btn">Three Cheers for Five Years</h3></center>
+<center><h3 class="btn">Terrible Things</h3></center>
+<center><h3 class="btn">Breakeven</h3></center>
+<center><h3 class="btn">Almost Paradise</h3></center>
+<center><h3 class="btn">ILYSB</h3></center>
+<center><h3 class="btn">Inside Out</h3></center>
+<center><h3 class="btn">Wake Me Up When September Ends</h3></center>
+<center><h3 class="btn">21 Guns</h3></center>
+<center><h3 class="btn">Battle Symphony</h3></center>
+<center><h3 class="btn">One More Night</h3></center>
+<center><h3 class="btn">She Will Be Loved</h3></center>
+<center><h3 class="btn">Locked Away</h3></center>
+<center><h3 class="btn">Need You Now</h3></center>
+<center><h3 class="btn">Skyfall</h3></center>
+<center><h3 class="btn">Jar Of Hearts</h3></center>
+<center><h3 class="btn">Let It Go</h3></center>
+<center><h3 class="btn">Let Her Go</h3></center>
+<center><h3 class="btn">Hall of Fame</h3></center>
+<center><h3 class="btn">Before The Worst</h3></center>
+<center><h3 class="btn">No Good in Goodbye</h3></center>
+<center><h3 class="btn">Six Degrees of Separation</h3></center>
+<center><h3 class="btn">For The First Time</h3></center>
+<center><h3 class="btn">Wanted</h3></center>
+<center><h3 class="btn">Set You Free</h3></center>
+<center><h3 class="btn">The Memory</h3></center>
+<center><h3 class="btn">Still Breathing</h3></center>
+</div>
+
+<br>
+<br>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header>
+
+
+
+<center><audio controls>
+  <source src="music/Eric.ogg" type="audio/ogg">
+  <source src="music/Eric.mp3" type="audio/mpeg">
+</audio></center>
+<br>
+
+<center><table border="thick"; border-color= "#DC5A5A"; width="500px"; bgcolor="white"><tr><td><center><p style="font-family: aladin; font-size: 15">
+You always ask me<br>
+Those words i say<br>
+And telling me what it means to me<br>
+Every single day<br>
+You always act this way<br>
+For how many times i told you<br>
+I love you<br>
+For this is all i know<br>
+Come to me and hold me<br>
+And you will see<br>
+The love i give<br>
+For you still hold the key<br>
+Every single day<br>
+You always act this way<br>
+For how many times i told you<br>
+I love you<br>
+For this is all i know<br>
+
+I'll never go far away from you<br>
+Even the sky will tell you<br>
+That i need you so<br>
+For this is all i know<br>
+I'll never go far away from you<br>
+
+Come to me and hold me<br>
+And you will see<br>
+The love i give<br>
+For you still hold the key<br>
+Every single day<br>
+You always act this way<br>
+For how many times i told you<br>
+I love you<br>
+For this is all i know<br>
+
+I'll never go far away from you<br>
+Even the sky will tell you that I need you so<br>
+For this is all I know<br>
+I'll never go far away from you<br>
+
+I'll never go away from you<br>
+Even the sky will tell you that I need you so<br>
+For this is all I know<br>
+I'll never go far away from you<br>
+
+I'll never go far away from you<br>
+Even the sky will tell you that I need you so<br>
+For this is all I know<br>
+I'll never go far away from you</p></center></td></tr></table></center>
+
+   
+   <header class="header">
+	   <h4 class="logo"></h4>
+</header>
+  
+  <br><br>
+<center><table border="thick"; border-color= "#DC5A5A"; width="700px"; bgcolor="#FCFCFC"><tr><td><center><p style="font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace; font-size: 15">
+  	Love,<br>
+  	Sana nagustuhan mo.<br>
+	*kamot sa ulo*<br>
+  	Kahit simple lang to.<br>
+  	Sana nagustuhan mo pa rin.<br><br>
+
+  	Happy second monthsary love.<br>
+	Alam ko, nagtatampo ka sa mga oras na to.<br>
+	*sighs*<br>
+	Sorry love kung na-late.<br>
+	Hinanapan ko pa kasi ng pagho-hostan to eh.<br>
+	Alam ko na di mababawi nito yung mga pagkukulang ko sayo. <br><br>
+	Pero sana mapasaya ka nito kahit saglit lang.<br><br>
+
+
+  	Alam ko din na di ko nagagampanan ng maayos yung<br>
+  	responsibilidad ko bilang boyfriend mo.<br>
+  	Kaya sobrang proud at nagpapasalamat ako<br>
+  	na nagkaroon ako ng isang katulad mo.<br>
+  	Salamat kasi hindi mo ko pinagsasawaan.<br>
+  	Kahit kasawa sawa na kong tao.<br>
+  	Lagi mo kong iniintindi.<br><br>
+	
+	Pero kahit ganito,<br>
+  	sana lagi mong tatandaan,<br>
+  	na ikaw lang ang uuwian ko.<br>
+  	Na ikaw lang yung mahal ko.<br>
+  	Ikaw lang yung babae ko.<br>
+  	At hindi ako bibitaw, gaya ng pinangako ko.<br>
+  	<br>
+  	Lagi kong sinasabi sayo noon,<br>
+  	na tsaka lang ako bibitaw kapag binitawan mo na ko.<br>
+  	Pero parang hindi na ganun eh.<br>
+  	Parang...<br>
+  	Parang di ko kayang bumitaw.<br>
+  	Kaya siguro mas tamang sabihin ko na.<br>
+  	Hindi ako bibitaw.<br>
+  	Kahit ikaw pa yung unang bumitaw.<br>  	
+  	<br>
+  	Oh. Baka iwan mo na ko niyan? pft.<br>
+  	Wag naman sana. Di pa ko handa.<br>
+  	*smiles*
+  	<br>
+  	<br>
+  	
+  	I love you so much.
+  	
+  	<br>
+  	<br>
+  	-Tim
+  </p>
+   </center></td></tr></table></center>
+  
+
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header>
+	
+	 <button class="dropbtn" id="11">Menu</button>
+
+	
+	
+</body>
+</html>
