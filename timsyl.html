@@ -1,0 +1,1787 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tim and Syl</title>
+<iframe width="0" height="0" position="fixed" src="music/Edwin.mp3" frameborder="0" allowfullscreen></iframe>
+<style>
+	
+.btn {
+	cursor: pointer;}
+.btn:hover {
+		background-color: indianred;
+	}
+	
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position:inherit;
+    display:inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+	position: fixed;
+}
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 500px){
+    .modal-content {
+        width: 70%;
+    }
+}
+	
+	
+</style>
+
+<link href="css/simpleGridTemplate.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+  <a class="active" href="timsyl.html">Home</a>
+  <a href="#Gallery">Gallery</a>
+  <a href="#Events">Events</a>
+  </div>
+</div>
+
+<!--Home-->
+<div class="container"> 
+  <header class="header">
+    <h4 class="logo">SYL || TIM</h4>
+  </header>
+
+<br>
+  <center><table width="200" border="1">
+    <tbody>
+      <tr>
+        <td><center>
+          <img src="images/syl_latest.jpg" alt="Pressylden Maxford" title = "Syl" width="250" height="250">          <br>
+          <a href="https://www.facebook.com/profile.php?id=100008665001724" target="_blank"></a> <br>
+          PRESSYLDEN MAXFORD<br>
+      </center>
+          <center><a href="https://www.facebook.com/people/Pressylden-Maxford/100008665001724" target="_blank"><img src="images/fb1.png" width="40" height="50" alt=""></a>
+          </center>                    </td>
+        <td><center>
+            <img src="images/tim_latest.jpg" alt="Timothy Grant" title="Tim" width="250" height="250">          <br>
+          <a href="https://www.facebook.com/grantypotato" target="_blank"></a> <br>
+          TIMOTHY GRANT<br>
+        </center>
+		  <center><a href="https://www.facebook.com/grantypotato" target="_blank"><img src="images/fb1.png" width="40" height="50" alt=""></a></center></td>
+      </tr>
+    </tbody>
+	  </table></center>
+<br>
+
+<center> 
+
+</center>
+
+</div>
+
+<!--Gallery-->
+<div class="container"> 
+
+
+  <header class="header">
+    <h4 class="logo"><a id="Gallery">PRESSYLDEN x TIMOTHY</a></h4>
+  </header>
+  
+  <table>
+  	<tr>
+		<td><center><img id="timsyl1" src="images/timsyl1.jpg" width="250" height="250" alt="1"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+		</center></td>
+		
+		<td><center><img id="timsyl2" src="images/timsyl2.jpg" width="250" height="250" alt="2"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+		</center></td>
+		
+		<td><center><img id="timsyl3" src="images/timsyl3.jpg" width="250" height="250" alt="3"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+		</center></td>
+	
+		<td><center><img id="timsyl4" src="images/timsyl4.jpg" width="250" height="250" alt="4"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><center><img id="timsyl5" src="images/timsyl5.jpg" width="250" height="250" alt="5"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl5');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="timsyl6" src="images/timsyl6.jpg" width="250" height="250" alt="6"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl6');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+ 		
+  		<td><center><img id="timsyl7" src="images/timsyl7.jpg" width="250" height="250" alt="7"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl7');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="timsyl8" src="images/timsyl8.jpg" width="250" height="250" alt="8"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl8');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><center><img id="timsyl9" src="images/timsyl9.jpg" width="250" height="250" alt="9"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl9');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="timsyl10" src="images/timsyl10.jpg" width="250" height="250" alt="10"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('timsyl10');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="timsyl11" src="images/timsyl11.jpg" width="250" height="250" alt="11"/>  		
+			<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('timsyl11');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+			</script>
+			</center></td>
+  		
+  		<td><center><img id="timsyl12" src="images/timsyl12.jpg" width="250" height="250" alt="12"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('timsyl12');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+			</script>
+			</center></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><center><img id="timsyl13" src="images/timsyl13.jpg" width="250" height="250" alt="13"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl13');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="timsyl13.1" src="images/timsyl13.1.jpg" width="250" height="250" alt="14"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('timsyl13.1');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="timsyl14" src="images/timsyl14.jpg" width="250" height="250" alt="15"/>  		
+			<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('timsyl14');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+			</script>
+			</center></td>
+  		
+  		<td><center><img id="timsyl14.1" src="images/timsyl14.1.jpg" width="250" height="250" alt="16"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('timsyl14.1');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+			</script>
+			</center></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><center><img id="timsyl14.2" src="images/timsyl14.2.jpg" width="250" height="250" alt="17"/>
+  			<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('timsyl14.2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="timsyl14.3" src="images/timsyl14.3.jpg" width="250" height="250" alt="18"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('timsyl14.3');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="timsyl14.4" src="images/timsyl14.4.jpg" width="250" height="250" alt="19"/>  		
+			<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('timsyl14.4');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+			</script>
+			</center></td>
+  		
+  		<td><center><img id="timsyl15" src="images/timsyl15.jpg" width="250" height="250" alt="20"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('timsyl15');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+			</script>
+			</center></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><center><img id="timsyl7.2" src="images/timsyl7.2.jpg" width="250" height="250" alt="21"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('timsyl7.2');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+			</script>
+			</center></td>
+  	</tr>
+  	
+  </table>
+ 
+  <header class="header">
+    <h4 class="logo">PRESSYLDEN MAXFORD</h4>
+  </header>
+
+  <table>
+  	<tr>
+		<td><center><img id="syl1" src="images/syl1.jpg" width="250" height="250" alt="1"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('syl1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+		</center></td>
+		
+		<td><center><img id="syl2" src="images/syl2.jpg" width="250" height="250" alt="2"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('syl2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+		</center></td>
+		
+		<td><center><img id="syl3" src="images/syl3.jpg" width="250" height="250" alt="3"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('syl3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+		</center></td>
+	
+		<td><center><img id="syl4" src="images/syl4.jpg" width="250" height="250" alt="4"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('syl4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><center><img id="syl5" src="images/syl5.jpg" width="250" height="250" alt="5"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('syl5');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="syl6" src="images/syl6.jpg" width="250" height="250" alt="6"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('syl6');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+ 		
+  		<td><center><img id="syl7" src="images/syl7.jpg" width="250" height="250" alt="7"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('syl7');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="syl8" src="images/syl8.jpg" width="250" height="250" alt="8"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('syl8');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><center><img id="syl9" src="images/syl9.jpg" width="250" height="250" alt="9"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('syl9');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="syl10" src="images/syl10.jpg" width="250" height="250" alt="10"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('syl10');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="syl11" src="images/syl11.jpg" width="250" height="250" alt="11"/>  		
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('syl11');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+			</script>
+			</center></td>
+  		
+  		<td><center><img id="syl12" src="images/syl12.jpg" width="250" height="250" alt="12"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('syl12');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+			</script>
+			</center></td>
+  	</tr>
+  </table>
+
+  <header class="header">
+    <h4 class="logo">TIMOTHY GRANT</h4>
+  </header>
+  
+  <table>
+  	<tr>
+		<td><center><img id="tim1" src="images/tim1.jpg" width="250" height="250" alt="1"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+			var img = document.getElementById('tim1');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+		</center></td>
+		
+		<td><center><img id="tim2" src="images/tim2.jpg" width="250" height="250" alt="2"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('tim2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+		</center></td>
+		
+		<td><center><img id="tim3" src="images/tim3.jpg" width="250" height="250" alt="3"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('tim3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+		</center></td>
+	
+		<td><center><img id="tim4" src="images/tim4.jpg" width="250" height="250" alt="4"/>
+		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('tim4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><center><img id="tim5" src="images/tim5.jpg" width="250" height="250" alt="5"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('tim5');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="tim6" src="images/tim6.jpg" width="250" height="250" alt="6"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('tim6');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+ 		
+  		<td><center><img id="tim7" src="images/tim7.jpg" width="250" height="250" alt="7"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('tim7');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="tim8" src="images/tim8.jpg" width="250" height="250" alt="8"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('tim8');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><center><img id="tim9" src="images/tim9.jpg" width="250" height="250" alt="9"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('tim9');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+ 		</center></td>
+  		
+  		<td><center><img id="tim10" src="images/tim_latest.jpg" width="250" height="250" alt="10"/>
+  		<div id="myModal" class="modal">
+ 		 <span class="close">&times;</span>
+ 		 <img class="modal-content" id="img01">
+		  <div id="caption"></div>
+		</div>
+		<script>
+
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById('tim10');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img.onclick = function()
+			{
+			modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName("close")[0];
+
+			span.onclick = function() 
+			{ 
+			modal.style.display = "none";
+			}
+</script>
+ 		</center></td>	
+	</tr>
+  </table>
+
+	</div>
+	
+<!--Event 1-->
+<div class="container"> 
+
+
+<header class="header">
+    <h4 class="logo"><a id="Events">EVENTS</a></h4>
+  </header>
+  
+  <br>
+  <center><p> Boom panes! May pagbanat si mahal.</p></center>
+  <br>
+  
+<center>
+ 	 <table>
+  	<tr>
+  		<td><center>
+  		<img src="events/1/1.PNG" width="285" height="35" alt=""/>
+  		</center></td>
+  	</tr>
+  	
+  	<tr>
+  		<td><center>
+  		<img src="events/1/2.PNG" width="151" height="228" alt=""/>
+  		</center></td> 
+  	</tr>
+  	
+  	<tr>
+  		<td><center>
+  		<img src="events/1/3.PNG" width="295" height="43" alt=""/>
+  		</center></td> </tr>
+  		
+  	<tr>
+  		<td><center>
+  		<img src="events/1/4.PNG" width="340" height="88" alt=""/>
+  		</center></td> 
+  	</tr>
+  		
+  	<tr>
+  		<td><center>
+  		<img src="events/1/5.PNG" width="242" height="43" alt=""/>
+  		</center></td>
+  	</tr>
+  	
+  </table>
+  </center>
+  
+   
+   
+   
+<header class="header">
+	<h4 class="logo"></h4>
+</header>
+ 
+ <br>
+ <center><p>Hahahaha. Mahal kita kaya tatawa ako.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+		<img src="events/asaran 101.PNG" width="601" height="344" alt=""/>  		</center></td>
+  	</tr>
+ </table></center>
+ 
+ 
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Pumi-pick up line. Pft.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="events/ayon pick up line 1.PNG" width="375" height="59" alt=""/>  	</tr>
+  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Ang bad influence naman nito. Hahaha.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="events/bad influence.PNG" width="603" height="281" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Ano po yung Biti love?</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="typos/biti pa ikaw.jpg" width="714" height="130" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Wala na. Tinamaan na naman ako.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="typos/boom pick up line 4.PNG" width="374" height="164" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Hays. Pft.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="events/buti pa typo mo naiipon ko, baon ko hindi..PNG" width="616" height="455" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>...</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="typos/etesocket.PNG" width="603" height="226" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Ito talaga theme song natin love. Pft.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="events/first jamming.PNG" width="602" height="163" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Giod morning. Teka sino si breakfast?</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="typos/Giodmorning.PNG" width="258" height="40" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>I have been slained.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="events/gumanti pt 1.PNG" width="596" height="231" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Double kill.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="events/gumanti pt 2.PNG" width="600" height="280" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Ang k9 ay aso. Ang k10 ay pusa.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="typos/k9.PNG" width="283" height="39" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Di ako makakahinga ng maluwat pag nawala ka sakin.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="typos/maluwat.PNG" width="399" height="53" alt=""/>  	
+</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Ang sama talaga hays.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="events/paninirang puri.PNG" width="601" height="300" alt=""/></table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Hawak ko naman kamay mo, habang parehas tayong nahuhulog.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center><img src="typos/pick up line 2.PNG" width="374" height="111" alt=""/>
+			</center></td>
+	</table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+	</header></center>
+
+
+ <br>
+ <center><p>May pang-counter attack ako jan siyempre. Pft.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="typos/pick up line 3.PNG" width="600" height="270" alt=""/>  	
+			</table></center>
+			
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Akala ko meron pa. Sad.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="events/pick up line na naudlot.PNG" width="602" height="335" alt=""/></table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Sana okeg ka lang love.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="typos/sana okeg ka lang.PNG" width="145" height="116" alt=""/></table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+ <br>
+ <center><p>Mahal na mahal din kita. Lagi mo sanang tatandaan.</p></center>
+ <br>
+ 
+<center><table>
+ 	 
+  	<tr>
+  		<td><center>
+<img src="events/Capture.PNG" width="281" height="332" alt=""/></table></center>
+
+<header class="header">
+    <h4 class="logo"></h4>
+</header></center>
+
+
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<header class="btn">
+    <h4 class="logo"><a href="html/clickme.html">CLICK ME</a></h4>
+</header>
+
+
+
+
+	
+	
+</body>
+</html>
