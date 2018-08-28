@@ -25,7 +25,7 @@
 }
 
 .dropdown {
-    position:inherit;
+    position:fixed;
     display:inline-block;
 }
 
@@ -54,11 +54,8 @@
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-	position: fixed;
-}
+
+
 #myImg {
     border-radius: 5px;
     cursor: pointer;
@@ -139,6 +136,7 @@
     }
 }
 	
+
 	
 </style>
 
@@ -149,13 +147,16 @@
 <body>
 
 <div class="dropdown">
-  <button class="dropbtn">Menu</button>
+  <button class="dropbtn" id="11">Menu</button>
   <div class="dropdown-content">
   <a class="active" href="index.html">Home</a>
   <a href="#Gallery">Gallery</a>
   <a href="#Events">Events</a>
   </div>
 </div>
+
+
+
 
 <!--Home-->
 <div class="container"> 
